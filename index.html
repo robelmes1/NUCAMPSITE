@@ -59,7 +59,7 @@
                             <div class="form-group row">
                                <label for="date" class="col-form-label col-sm-6">Date</label>
                                 <div class="col col-sm-6">
-                                   <input type="date" id="date" name="date" placeholder="" class="form-control">
+                                   <input type="date" id="date" name="date" class="form-control">
                                 </div>
                            </div>
                            <div class="form-group row">
@@ -79,7 +79,6 @@
                                        <button type="submit" class="btn btn-primary">Search</button>
                                    </div>
                                 </div>
-                            </div>
                         </form>
                     </div>
                 </div>
@@ -187,6 +186,9 @@
                         <span class="carousel-control-next-icon"></span>
                         <span class="sr-only">Next</span>
                     </a>
+                        <button class="btn btn-danger btn-sm" id="carouselButton">
+                            <i class="fa fa-pause"> </i>
+                        </button>
                 </div>
             </div>
         </div>
@@ -220,7 +222,7 @@
                         <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains,
                             this campground on the shores of the pristine React Lake is a favorite for fly fishers. </p>
                     </div>
-                        <img src="/img/react-lake-thumb.jpg" alt="React Lake"class="d-flex ml-3 img-thumbnail">
+                        <img src="/img/react-lake-thumb.jpg" alt="React Lake" class="d-flex ml-3 img-thumbnail">
                 </div>
                 
                     
@@ -274,6 +276,40 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
+    <!-- <script>
+        $(function() {
+          $(".carousel").carousel( { interval: 2000 } );
+            $("#carouselButton").click(function(){
+                if ($("#carouselButton").children("i").hasClass("fa-pause")) {
+                    $(".carousel").carousel("pause");
+                    $("#carouseButton").children("i").removeClass("fa-pause");
+                    $("#carouseButton").children("i").addClass("fa-play");
+                } else {
+                    $(".carousel").carousel("cycle");
+                    $("carouselButton").children("i").removeClass("fa-play");
+                    $("#carouseButton").children("i").addClass("fa-pause");
+
+                }
+            });
+        });
+    </script> -->
+
+    <script>
+        $(function() {
+            $(".carousel").carousel( { interval: 2000 } );
+            $("#carouselButton").click(function(){
+                if ($("#carouselButton").children("i").hasClass("fa-pause")) {
+                    $(".carousel").carousel("pause");
+                    $("#carouselButton").children("i").removeClass("fa-pause");
+                    $("#carouselButton").children("i").addClass("fa-play");
+                } else {
+                    $(".carousel").carousel("cycle");
+                    $("#carouselButton").children("i").removeClass("fa-play");
+                    $("#carouselButton").children("i").addClass("fa-pause"); 
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
