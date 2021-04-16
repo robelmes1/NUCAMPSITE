@@ -22,11 +22,12 @@ h2 {
    color: $color-primary;
 }
 
-header { 
-        h2 {
-   color: $color-pale;
-  }
+header {
+     h2 {
+        color: $color-pale;
+ }
 }
+
 .site-footer {
    background-image: linear-gradient($color-pale, white);
    padding: 20px 0;
@@ -45,7 +46,7 @@ header {
 }
 
 .navbar {
-   background-color: $color-mid;
+    background-color: $color-mid;
 }
 
 .tab-content {
@@ -54,16 +55,17 @@ header {
    padding: 10px;
 } 
 .carousel-caption {
-   background-color: rgba(0, 0, 0, 0.5);
+    background-color: $color-black-transparent;
 }
 
 .carousel {
-   border: solid $color-secondary;
+    border: solid $color-secondary;
 }
 
 #carouselButton {
    position: absolute;
    right: 0;
    bottom: 0;
-   z-index: 100;
+   z-index: 100; 
 }
+ 
